@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nathan BASOL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="content/favicon.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <button class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a class="nav-link" href="#hero">Accueil</a></li>
+                <li><a class="nav-link" href="#about">À propos</a></li>
+                <li><a class="nav-link" href="#skills">Compétences</a></li>
+                <li><a class="nav-link" href="#projects">Projets</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="content/background-2.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+        <div class="hero-content">
+            <h1>Mon Portfolio</h1>
+            <h2>Étudiant en informatique et développeur Java en alternance</h2>
+            <div class="logos">
+                <a href="https://www.linkedin.com/in/nathan-basol/" target="_blank">
+                    <img src="content/linkedin-logo.svg" alt="LinkedIn">
+                </a>
+                <a href="https://gitlab.com/Basol_Nathan" target="_blank">
+                    <img src="content/gitlab-logo.svg" alt="GitLab">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="section">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2>À propos de moi</h2>
+                <p>
+                    Étudiant en informatique à l'IUT de Vannes. Je suis actuellement alternant au Crédit Agricole 
+                    Technologies et Services en tant que développeur Java. J'ambitionne de devenir développeur backend et souhaite continuer mon parcours scolaire en intégrant une école d'ingénieur. 
+                    Je m'intéresse particulièrement aux statistiques et à la data.
+                </p>
+                <a href="content/cv.pdf" class="btn btn-cv" download>Télécharger mon CV</a>
+            </div>
+            <div class="about-photo">
+                <img src="content/your-photo.jpg" alt="Votre photo" class="profile-img">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Compétences -->
+    <section id="skills" class="section bg-dark">
+        <div class="container">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <img src="content/java.png" alt="HTML">
+                <img src="content/spring.png" alt="CSS">
+                <img src="content/docker.png" alt="JavaScript">
+                <img src="content/git.png" alt="Java">
+                <img src="content/python.png" alt="Python">
+                <img src="content/javascript.png" alt="Git">
+                <img src="content/mysql.png" alt="React">
+                <img src="content/html.png" alt="SQL">
+                <img src="content/css.png" alt="Docker">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="projects-content">
+                <div class="project-card fade-in">
+                    <img src="content/nantes.png" alt="Projet 1">
+                    <h5>CycloNantais</h5>
+                    <div class="technologies">
+                        <span class="tech tech-backend">Java</span>
+                        <span class="tech tech-other">JavaFX</span>
+                    </div>
+                    <p>Application qui permet d'analyser les données des pistes cyclables de la ville de Nantes</p>
+                    <a href="https://github.com/EDM115/SAE-Velos-Nantes" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="content/timi.png" alt="Projet 2">
+                    <h5>Timi</h5>
+                    <div class="technologies">
+                        <span class="tech tech-other">Flutterflow</span>
+                    </div>
+                    <p>Un chatbot qui peut apprendre des nouvelles phrases</p>
+                    <a href="https://timiapp.flutterflow.app/" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="content/numeria.png" alt="Projet 3">
+                    <h5>Numéria</h5>
+                    <div class="technologies">
+                        <span class="tech tech-backend">NodeJS</span>
+                        <span class="tech tech-frontend">React</span>
+                        <span class="tech tech-backend">MySQL</span>
+                    </div>
+                    <p>Platerforme de défis informatique à destination des jeunes</p>
+                    <a href="https://github.com/Mathieu-Stephan/Numeria" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="content/cluedo.jpg" alt="Projet 4">
+                    <h5>Cluedo</h5>
+                    <div class="technologies">
+                        <span class="tech tech-backend">Neo4j</span>
+                        <span class="tech tech-frontend">React</span>
+                        <span class="tech tech-backend">NodeJS</span>
+                    </div>
+                    <p>Site internet permettant de jouer au célèbre jeu cluedo contre l'ordinateur</p>
+                    <a href="https://gitlab.com/Basol_Nathan/cluedo" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="content/sport.png" alt="Projet 5">
+                    <h5>SportTrack</h5>
+                    <div class="technologies">
+                        <span class="tech tech-frontend">HTML/CSS</span>
+                        <span class="tech tech-frontend">Javascript</span>
+                    </div>
+                    <p>Site internet qui permet d'envoyer ses données sportives</p>
+                    <a href="https://github.com/EDM115/sport-track" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+                <div class="project-card fade-in">
+                    <img src="content/todo.jpg" alt="Projet 6">
+                    <h5>TodoList</h5>
+                    <div class="technologies">
+                        <span class="tech tech-other">Android Studio</span>
+                    </div>
+                    <p>Application Android qui permet de créer et gérer des tâches</p>
+                    <a href="https://gitlab.com/Basol_Nathan/todo-list-app" class="btn" target="_blank">Voir le Projet</a>
+                </div>
+            </div>
+            <div class="more-projects">
+                <p>Retrouvez plus de projets sur mon GitLab !</p>
+                <a href="https://gitlab.com/Basol_Nathan" target="_blank" class="gitlab-link">
+                    <img src="content/gitlab-logo.svg" alt="GitLab Logo">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Nathan BASOL</p>
+            <p>Contact : <a href="mailto:yourmail@example.com">basol.nathan@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    const navbar = document.querySelector('.navbar'); // Sélection de la navbar
+
+    // Fonction pour changer la classe en fonction de la position
+    const handleScroll = () => {
+        if (window.scrollY === 0) {
+            navbar.classList.add('navbar-transparent'); // Ajouter la classe pour rendre transparent
+        } else {
+            navbar.classList.remove('navbar-transparent'); // Retirer la classe pour le fond sombre
+        }
+    };
+
+    // Détecter le défilement
+    window.addEventListener('scroll', handleScroll);
+
+    // Appeler une fois au chargement pour vérifier la position initiale
+    handleScroll();
+
+
+
+    // Fonction pour vérifier si un élément est visible dans la fenêtre
+    const isVisible = (element) => {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight &&
+            rect.bottom >= 0
+        );
+    };
+
+    // Ajoute la classe visible aux éléments lorsqu'ils sont visibles
+    const handleScrollAnimations = () => {
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach((el) => {
+            if (isVisible(el)) {
+                el.classList.add('visible');
+            }
+        });
+    };
+
+    // Événement de défilement
+    window.addEventListener('scroll', handleScrollAnimations);
+
+    // Vérifie au chargement initial
+    document.addEventListener('DOMContentLoaded', handleScrollAnimations);
+</script>
+
+</html>

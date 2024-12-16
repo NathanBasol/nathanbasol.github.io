@@ -1,0 +1,520 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche tout débordement horizontal */
+    background-color: transparent;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #121212;
+}
+h1, h2, h4, h5 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* Navbar transparente */
+.navbar.navbar-transparent {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Container for navbar and burger */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1100;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Navbar Links (Hidden by default for mobile) */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Centre les liens horizontalement */
+    gap: 30px; /* Espacement entre les liens */
+    list-style: none;
+    margin: 0 auto; /* Centre le conteneur dans la navbar */
+    padding: 0;
+    width: 100%; /* Permet de répartir uniformément dans toute la barre */
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #813bc7;
+}
+
+
+
+/* Hero Section */
+#hero {
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-content {
+    z-index: 1;
+}
+.hero-content h1 {
+    font-size: 4.4rem;
+    font-weight: bold;
+}
+.hero-content h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+.logos {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.logos img {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.logos img:hover {
+    transform: scale(1.2);
+}
+
+/* About Section */
+#about .about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #813bc7;
+    color: white;
+    border-radius: 30px; /* Ajustez ici pour rendre les boutons plus arrondis */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #af50d4;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 40px; /* Augmente l'espacement entre les images */
+    margin-top: 50px; /* Ajoute plus d'espace au-dessus de la grille */
+}
+
+.skills-grid img {
+    width: 120px; /* Taille agrandie des images */
+    height: 120px; /* Ajuste pour un format carré plus grand */
+    object-fit: cover; /* Maintient la proportion de l'image */
+    margin: 0 auto; /* Centre l'image */
+    border-radius: 10px; /* Ajoute un léger arrondi */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation au survol */
+}
+
+.skills-grid img:hover {
+    transform: scale(1.1); /* Légère augmentation au survol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Ombre au survol */
+}
+
+/* Container pour organiser le texte à gauche et l'image à droite */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px; /* Espace entre le texte et l'image */
+}
+
+/* Partie texte */
+.about-text {
+    flex: 1; /* Le texte occupe une partie de l'espace */
+    text-align: left;
+}
+
+.about-text h2 {
+    margin-bottom: 20px; /* Espace entre le titre et le paragraphe */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #cccccc; /* Texte gris clair */
+    margin-bottom: 20px; /* Espace entre le paragraphe et le bouton */
+    padding-left: 15px;
+}
+
+.about-text .btn-cv {
+    padding: 10px 20px;
+    background-color: #813bc7;
+    color: white;
+    border-radius: 30px; /* Bouton arrondi */
+    transition: background-color 0.3s;
+    margin-left: 15px;
+}
+
+.about-text .btn-cv:hover {
+    background-color: #af50d4;
+}
+
+/* Partie photo */
+.about-photo {
+    flex: 1; /* L'image occupe une partie de l'espace */
+    text-align: center;
+}
+
+.about-photo .profile-img {
+    width: 100%; /* Image prend tout l'espace disponible */
+    max-width: 400px; /* Limite la taille de l'image */
+    height: auto; /* Conserve les proportions */
+    border-radius: 10px; /* Arrondi léger pour un style élégant */
+}
+
+
+
+
+/* Projects Section */
+#projects .projects-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #1e1e1e; /* Fond sombre */
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Assure que l'image reste confinée dans la carte */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+    width: 100%; /* Prend toute la largeur de la carte */
+    height: 220px; /* Hauteur fixe pour un format rectangulaire */
+    object-fit: cover; /* Maintient le ratio de l'image tout en remplissant l'espace */
+    border-radius: 0; /* Supprime les coins arrondis de l'image */
+}
+
+
+.project-card h5 {
+    margin-bottom: 10px;
+    font-size: 1.5rem; /* Augmentez la taille de la police */
+    font-weight: bold; /* Ajoutez de la graisse au texte */
+    color: #ffffff; /* Assurez-vous que la couleur est bien contrastée */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajoutez un effet d'ombre */
+}
+
+.project-card .technologies {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacement entre les rectangles */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+}
+
+.tech {
+    background-color: #813bc7; /* Couleur violet */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.project-card p {
+    margin: 10px 0 15px;
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.project-card .btn {
+    padding: 10px 20px;
+    background-color: #813bc7;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 20px; /* Ajoute un espace sous le bouton */
+}
+
+.project-card .btn:hover {
+    background-color: #af50d4;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a; /* Fond sombre */
+    color: white; /* Texte blanc */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Ligne subtile en haut */
+}
+.footer a {
+    color: #813bc7; /* Couleur violette pour l'email */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.footer a:hover {
+    color: #af50d4; /* Effet au survol pour l'email */
+}
+
+/* Titres de sections */
+.section h2 {
+    font-size: 2rem; /* Taille augmentée */
+    font-weight: bold;
+    text-align: left; /* Aligne les titres à gauche */
+    margin-bottom: 60px; /* Espacement sous le titre */
+    color: white; /* Assurez-vous que la couleur du titre est bien visible */
+    padding-left: 15px; /* Espacement entre la ligne et le texte */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Show burger menu */
+    }
+
+    .navbar-nav {
+        display: none; /* Hide navbar links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Below the navbar */
+        right: 0;
+        background-color: #1a1a1a;
+        width: 100%;
+        padding: 20px 0;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    .navbar-nav.active {
+        display: flex; /* Show navbar when active */
+    }
+}
+
+/* Technologies Backend */
+.tech-backend {
+    background-color: #b03030; /* Rouge foncé */
+    color: white;
+}
+
+/* Technologies Frontend */
+.tech-frontend {
+    background-color: #3050b0; /* Bleu foncé */
+    color: white;
+}
+
+/* Autres Technologies */
+.tech-other {
+    background-color: #4a4a4a; /* Gris foncé */
+    color: white;
+}
+
+.more-projects {
+    text-align: center;
+    margin-top: 80px; /* Espacement par rapport aux projets */
+    font-size: 1rem;
+    color: white;
+}
+
+.more-projects p {
+    margin-bottom: 15px; /* Espacement entre le texte et le logo */
+    font-size: 1.2rem; /* Taille légèrement augmentée */
+    font-weight: bold;
+    color: #cccccc; /* Texte en gris clair */
+}
+
+.more-projects a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.more-projects a img {
+    width: 50px; /* Taille ajustée pour le logo */
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-projects a:hover img {
+    transform: scale(1.2); /* Légère augmentation au survol */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Effet d'ombre au survol */
+}
+
+
+@media (max-width: 768px) {
+    /* Supprimer la navbar sur mobile */
+    .navbar {
+        display: none;
+    }
+
+    /* Centrer les titres pour toutes les sections */
+    .section h2 {
+        text-align: center; /* Centre les titres */
+        padding-left: 0; /* Supprime le padding gauche */
+    }
+
+    /* Partie "À propos de moi" */
+    .about-container {
+        flex-direction: column; /* Empile les éléments verticalement */
+        text-align: center;
+    }
+
+    .about-photo {
+        order: 1; /* La photo apparaît en premier */
+        margin-bottom: 20px; /* Espacement avec le texte */
+    }
+
+    .about-text {
+        order: 2;
+        text-align: center; /* Centrer le texte */
+    }
+
+    .about-text .btn-cv {
+        margin-left: 0; /* Supprime le décalage gauche */
+    }
+
+    /* Partie "Mes Projets" */
+    #projects .projects-content {
+        grid-template-columns: 1fr; /* 1 carte par ligne */
+        gap: 30px; /* Espacement entre les cartes */
+    }
+
+    /* Partie "Mes Compétences" */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 2 images par ligne */
+        gap: 20px; /* Réduit l'espacement entre les images */
+    }
+
+    .skills-grid img {
+        width: 100px; /* Réduit légèrement la taille des images */
+        height: 100px;
+    }
+
+    /* Hero Section (Suppression de la navbar et ajustement centré) */
+    #hero {
+        padding: 0 20px; /* Ajoute un peu de padding pour l'écran mobile */
+    }
+
+    #hero .hero-content h1 {
+        font-size: 3rem; /* Réduit la taille du titre */
+    }
+
+    #hero .hero-content h2 {
+        font-size: 1rem; /* Réduit la taille du sous-titre */
+    }
+
+    #hero .logos img {
+        width: 40px; /* Réduit la taille des logos */
+    }
+}
+
+
+/* Animation de base */
+.fade-in {
+    opacity: 0; /* Commençent invisibles */
+    transform: translateX(-50px); /* Déplacés vers la gauche */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Quand l'élément devient visible */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateX(0); /* Revient à sa position normale */
+}
